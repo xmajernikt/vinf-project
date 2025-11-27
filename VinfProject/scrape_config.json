@@ -1,0 +1,6 @@
+{
+  "type": "domy",
+  "ponuka": "predaj",
+  "max_pages": 30,
+  "output": "properties.json"
+}

@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  vinf:
+    build: .
+    container_name: vinf_container
+    volumes:
+      - .:/workspace # Mount entire project directory
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: sleep infinity

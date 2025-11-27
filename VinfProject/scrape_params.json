@@ -1,0 +1,67 @@
+  {
+    "scrape_params": [
+
+      {
+        "root_url": "https://www.nehnutelnosti.sk/vysledky/byty/predaj",
+        "country": "Slovakia",
+        "property_url_regex": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-_]+\\/?|\\?page=[0-9]+)",
+        "validation_pattern": "Plocha bytu|Plocha domu",
+        "property_url_regex_full": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-_]+\\/?|\\?page=[0-9]+)",
+        "max_saves": 1000
+
+
+      },
+      {
+        "root_url": "https://www.nehnutelnosti.sk/vysledky/byty/prenajom",
+        "country": "Slovakia",
+        "property_url_regex": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-_]+\\/?|\\?page=[0-9]+)",
+        "validation_pattern": "Plocha bytu|Plocha domu",
+        "property_url_regex_full": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-_]+\\/?|\\?page=[0-9]+)",
+        "max_saves": 1000
+
+
+      },
+      {
+        "root_url": "https://www.nehnutelnosti.sk/vysledky/domy/predaj",
+        "country": "Slovakia",
+        "property_url_regex": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-]+\\/?|\\?page=[0-9]+)",
+        "validation_pattern": "Plocha domu|Plocha bytu",
+        "property_url_regex_full": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-]+\\/?|\\?page=[0-9]+)",
+        "max_saves": 1000
+
+
+      },
+      {
+        "root_url": "https://www.nehnutelnosti.sk/vysledky/domy/prenajom",
+        "country": "Slovakia",
+        "property_url_regex": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-]+\\/?|\\?page=[0-9]+)",
+        "validation_pattern": "Plocha domu|Plocha bytu",
+        "property_url_regex_full": "(https:\\/\\/www\\.nehnutelnosti\\.sk\\/detail\\/[A-Za-z0-9-]+\\/?|\\?page=[0-9]+)",
+        "max_saves": 1000
+      },
+      {
+        "root_url": "https://www.immobilienscout24.at/regional/oesterreich/wohnung-mieten",
+        "country": "Austria",
+        "property_url_regex": "\\/(expose\\/[A-Za-z0-9-]+|regional\\/oesterreich\\/wohnung-mieten\\/seite-[0-9]+)\\/?",
+        "validation_pattern": "Wohnfläche"
+      },
+      {
+        "root_url": "https://www.immobilienscout24.at/regional/oesterreich/wohnung-kaufen",
+        "country": "Austria",
+        "property_url_regex": "\\/(expose\\/[A-Za-z0-9-]+|regional\\/oesterreich\\/wohnung-kaufen\\/seite-[0-9]+)\\/?",
+        "validation_pattern": "Wohnfläche"
+      },
+      {
+        "root_url": "https://www.immobilienscout24.at/regional/oesterreich/haus-kaufen",
+        "country": "Austria",
+        "property_url_regex": "\\/(expose\\/[A-Za-z0-9-]+|regional\\/oesterreich\\/haus-kaufen\\/seite-[0-9]+)\\/?",
+        "validation_pattern": "Wohnfläche"
+      },
+      {
+        "root_url": "https://www.immobilienscout24.at/regional/oesterreich/haus-mieten",
+        "country": "Austria",
+        "property_url_regex": "\\/(expose\\/[A-Za-z0-9-]+|regional\\/oesterreich\\/haus-mieten\\/seite-[0-9]+)\\/?",
+        "validation_pattern": "Wohnfläche"
+      }
+    ]
+  }
