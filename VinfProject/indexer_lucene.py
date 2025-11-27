@@ -33,25 +33,26 @@ class LuceneIndexer:
         return result
 
 
-    def load_from_tsv(self, path):
+    def load_from_tsv(self, path, indexable_fields=None):
+       
         self.loaded_docs = []
-
+        
         with open(path, encoding="utf-8") as f:
             reader = csv.DictReader(f, delimiter="\t")
-            fields = reader.fieldnames
-
+            
             for row in reader:
                 parts = []
-                for field in fields:
-                    val = str(row.get(field, "")).strip()
+                for field, val in row.items():
+                    # Only index specified fields
+                    if indexable_fields and field not in indexable_fields:
+                        continue
+                        
+                    val = str(val).strip()
                     if val:
                         parts.append(f"{field}: {val}")
-
+                
                 text = " ".join(parts)
                 self.loaded_docs.append((row, text))
-
-        print(f"Loaded {len(self.loaded_docs)} rows from {path}")
-
    
     def build_index(self):
         writer = self.create_writer()
@@ -123,14 +124,14 @@ def main():
     print("Initializing Lucene Indexer...")
 
     indexer = LuceneIndexer(index_path="lucene_index")
-
+    indexable_fields = ["title", "property_type", "location", "price", "description", "offer_type", "address", "area", "energy_class", "rooms", "year_built", "condition", "price_per_m2", "rent_price", "deposit", "availability", "source_country", "population", "city", "elevation", "timezone", "mayor", "historic_sites", "nicknames"]
     tsv_path = "VinfProject/data.csv"   
-    indexer.load_from_tsv(tsv_path)
+    indexer.load_from_tsv(tsv_path, indexable_fields=indexable_fields)
 
     indexer.build_index()
 
     print("\nKeyword Search:")
-    for score, doc in indexer.search_keyword("trnava"):
+    for score, doc in indexer.search_keyword("matej"):
         print(f"Score: {score:.4f}")
         print(f"Document: {doc}")
         print("-" * 50)
