@@ -129,26 +129,26 @@ def main():
 
     indexer.build_index()
 
-    print("\n=== Keyword Search: 'bratislava' ===")
-    for score, doc in indexer.search_keyword("1110 Wien"):
+    print("\nKeyword Search:")
+    for score, doc in indexer.search_keyword("trnava"):
         print(f"Score: {score:.4f}")
         print(f"Document: {doc}")
         print("-" * 50)
 
-    print("\n=== Phrase Search: 'vienna' ===")
-    for score, doc in indexer.search_phrase("danub"):
+    print("\nPhrase Search:")
+    for score, doc in indexer.search_phrase("rd na predaj lokalita spiegelsalle"):
         print(f"Score: {score:.4f}")
         print(f"Document: {doc}")
         print("-" * 50)
 
-    print("\n=== Fuzzy Search: 'appl' ===")
-    for score, doc in indexer.search_fuzzy("danub"):
+    print("\nFuzzy Search:")
+    for score, doc in indexer.search_fuzzy("tranva"):
         print(f"Score: {score:.4f}")
         print(f"Document: {doc}")
         print("-" * 50)
 
-    print("\n=== Boolean AND Search: 'apple' AND 'red' ===")
-    for score, doc in indexer.search_boolean_and("vienna", "flat"):
+    print("\nBoolean AND Search: ")
+    for score, doc in indexer.search_boolean_and("trnava", "house"):
 
         print(f"Score: {score:.4f}")
         print(f"Document: {doc}")
