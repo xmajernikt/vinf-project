@@ -25,7 +25,10 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
+.venv311/
+output/
+logs/
+lucene_index/
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -50,14 +53,13 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+*.parquet
 
 # Translations
 *.mo
 *.pot
 *.html
 *.tsv
-*.csv
-*.parquet
 # Django stuff:
 *.log
 local_settings.py
