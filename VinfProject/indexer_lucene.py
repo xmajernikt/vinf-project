@@ -313,7 +313,7 @@ def main():
 
     # print("\nQuery: buy flat 3 rooms vienna with price between 400000 and 600000")
 
-    # for score, doc in indexer.search_with_filters(
+    # for score, doc in indexer.search(
     #     query_text="vienna flat 3 rooms buy",
     #     filters={
     #         'price_range': (0, 1500000),
@@ -324,19 +324,19 @@ def main():
    
 
     print("\nQuery: flat rent bratislava 3 rooms")
-    for score, doc in indexer.search_google_style("flat rent bratislava 3 rooms", top_n=5):
+    for score, doc in indexer.search("flat rent bratislava 3 rooms", top_n=5):
         print_property_details(score, doc)
 
     print("\nQuery: house train station buy")
-    for score, doc in indexer.search_google_style("house train station buy", top_n=5):
+    for score, doc in indexer.search("house train station buy", top_n=5):
         print_property_details(score, doc)
 
     print("\nQuery: flat buy beauty on danube")
-    for score, doc in indexer.search_google_style("flat buy beauty on danube", top_n=5):
+    for score, doc in indexer.search("flat buy beauty on danube", top_n=5):
         print_property_details(score, doc)
     
     print("\nQuery: rent flat trnava novostavba")
-    for score, doc in indexer.search_google_style("rent flat trnava novostavba", top_n=5):
+    for score, doc in indexer.search("rent flat trnava novostavba", top_n=5):
         print_property_details(score, doc)
 
 
